@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ボイス資料 ／ ライオス</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0d0a1a;--bg2:#16112a;--bg3:#1e1838;
+  --mine:#80a8f0;--border:rgba(139,92,246,0.22);
+  --text:#ede8f5;--text2:#9088aa;--gold:#e8b84b;
+}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
+  font-size:15px;line-height:1.7;padding-bottom:50px;
+}
+/* ===== ヘッダー ===== */
+.page-header{
+  background:linear-gradient(135deg,#0e1a3a,#0e1a3acc);
+  border-bottom:2px solid #80a8f0;
+  padding:20px 18px 16px;position:sticky;top:0;z-index:50;
+}
+.header-inner{display:flex;align-items:center;gap:14px;}
+.header-icon{font-size:40px;}
+.header-text h1{font-size:20px;color:#80a8f0;letter-spacing:1px;margin-bottom:2px;}
+.header-text p{font-size:12px;color:rgba(255,255,255,0.6);}
+.header-files{font-size:11px;color:rgba(255,255,255,0.5);font-family:monospace;margin-top:3px;}
+
+/* ===== プロフィールカード ===== */
+.profile-card{
+  margin:14px 14px 0;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;
+}
+.profile-head{
+  padding:10px 14px;
+  background:linear-gradient(135deg,#0e1a3aaa,#0e1a3a55);
+  border-bottom:1px solid var(--border);
+  font-size:11px;color:#80a8f0;letter-spacing:1px;
+}
+.profile-body{padding:12px 14px;font-size:13px;color:#c0b8d8;line-height:1.8;}
+.vtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.vtag{
+  font-size:12px;padding:4px 11px;border-radius:20px;
+  background:rgba(139,92,246,0.15);color:#9080cc;
+  border:1px solid rgba(139,92,246,0.3);
+}
+.special-badge{
+  margin:10px 14px 0;padding:10px 14px;
+  background:rgba(192,57,43,0.15);color:#f08080;
+  border:1px solid rgba(192,57,43,0.3);
+  border-radius:10px;font-size:12px;line-height:1.8;
+}
+
+/* ===== 凡例 ===== */
+.legend{
+  margin:12px 14px 0;
+  display:flex;gap:10px;flex-wrap:wrap;
+  font-size:12px;color:var(--text2);
+  padding:9px 12px;background:#16112a;
+  border:1px solid var(--border);border-radius:8px;
+}
+.leg-mine{color:#80a8f0;font-weight:bold;}
+.leg-other{color:var(--text2);}
+
+/* ===== シーンブロック ===== */
+.scene-block{margin:14px 14px 0;}
+.scene-title{
+  font-size:13px;color:var(--gold);
+  padding:8px 12px;
+  background:#16112a;border:1px solid var(--border);
+  border-radius:10px 10px 0 0;
+  letter-spacing:1px;
+}
+.scene-lines{
+  background:#100c20;
+  border:1px solid var(--border);border-top:none;
+  border-radius:0 0 10px 10px;
+  padding:10px;display:flex;flex-direction:column;gap:6px;
+}
+
+/* ===== セリフ行（担当） ===== */
+.line.mine{
+  background:rgba(128,168,240,0.1);
+  border:1.5px solid #80a8f0;
+  border-radius:8px;padding:9px 11px;
+}
+.mine-label{color:#80a8f0;font-weight:bold;font-size:12px;}
+.mine-text{
+  font-size:15px;color:#ffffff;
+  font-weight:500;line-height:1.75;margin-top:4px;
+}
+.line-note{
+  font-size:12px;color:#80a8f0;opacity:0.8;
+  margin-top:5px;padding-top:5px;
+  border-top:1px solid rgba(128,168,240,0.3);
+  font-style:italic;
+}
+
+/* ===== セリフ行（他キャラ） ===== */
+.line.other{
+  padding:6px 10px;
+  border-radius:6px;
+  background:transparent;
+}
+.other-label{font-size:11px;color:var(--text2);display:block;margin-bottom:2px;}
+.other-text{font-size:13px;color:#7070a0;line-height:1.7;}
+
+/* ===== ファイルタグ ===== */
+.line-meta{display:flex;align-items:center;gap:8px;margin-bottom:2px;}
+.file-tag{
+  font-size:10px;padding:2px 8px;
+  background:rgba(0,0,0,0.4);color:rgba(255,255,255,0.5);
+  border-radius:4px;font-family:monospace;
+}
+.char-label{font-size:12px;}
+
+/* ===== 注意書き ===== */
+.note-box{
+  margin:14px;padding:12px 14px;
+  background:rgba(139,92,246,0.08);
+  border:1px solid rgba(139,92,246,0.25);
+  border-radius:10px;font-size:12px;color:var(--text2);line-height:1.8;
+}
+.note-box strong{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-inner">
+    <div class="header-icon">🔮</div>
+    <div class="header-text">
+      <h1>ライオス</h1>
+      <p>魔法使い・男性</p>
+      <p class="header-files">raios_01〜raios_07</p>
+    </div>
+  </div>
+</div>
+
+<div class="profile-card">
+  <div class="profile-head">▶ キャラクター・性格</div>
+  <div class="profile-body">
+    クールで皮肉屋、口数が少ない。感情を表に出すことをひどく嫌うが幼馴染のエリナには少しだけ素が出る。「……」が多く言葉の前後に間を取るのが癖。本当は仲間思いだが絶対に認めない。
+    <div class="vtags"><span class="vtag">20代 男性</span><span class="vtag">低め・クール</span><span class="vtag">間が多い</span><span class="vtag">皮肉口調</span></div>
+  </div>
+</div>
+
+
+
+<div class="note-box">
+  <strong>【収録について】</strong><br>
+  ・（）内の地の文は収録不要です<br>
+  ・……は間を取ってください。——は余韻です<br>
+  ・<span style="color:#80a8f0;font-weight:bold;">■ 色付きのセリフ</span>があなたの担当セリフです
+</div>
+
+<div class="legend">
+  <span class="leg-mine">■ あなたのセリフ（収録対象）</span>
+  <span class="leg-other">■ 相手のセリフ（参考・前後の流れ）</span>
+</div>
+
+<div class="scene-block">
+  <div class="scene-title">🏰 旅立ちの朝</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">⚔️ アレン</span>
+  <div class="line-text other-text">……よし。行くぞ！</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">いつもそれだけ。もうちょっとかっこいい台詞はないの、アレン。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_01</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">どうせ頭の中は空っぽだろう。剣だけ持っていけ。</div>
+  <div class='line-note'>🎭 感情なく淡々と。</div>
+</div><div class="line other">
+  <span class="char-label other-label">⚔️ アレン</span>
+  <div class="line-text other-text">うるさいな！……あれ、あの人——</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">遅いぞ。もう日が高い。</div>
+</div><div class="line other">
+  <span class="char-label other-label">⚔️ アレン</span>
+  <div class="line-text other-text">な、なんで来てるんですか！わざわざ——</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">黙れ。……剣の握り方、直ってないな。右手の小指、もう少し締めろ。</div>
+</div><div class="line other">
+  <span class="char-label other-label">⚔️ アレン</span>
+  <div class="line-text other-text">（苦笑いしながら剣を握り直す）……はい。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🛡️ グランツ</span>
+  <div class="line-text other-text">行ってこい。……必ず帰ってこい。お前が死んだら——俺が悲しむだろうが。</div>
+</div><div class="line other">
+  <span class="char-label other-label">✨ セラフィア</span>
+  <div class="line-text other-text">（小声で）アレンさん……絶対に、帰ってきてくださいね。</div>
+</div></div>
+</div><div class="scene-block">
+  <div class="scene-title">🧙 旅の賢者</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">おや。若い旅人たちよ、疲れた顔をしておるな。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">ええ、まあ……あなたは？</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">わしはゼフィルと申す。長く旅をしておるただの老いぼれよ。……して、魔王城へ向かうのかね？</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_02</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……なぜそれを。</div>
+  <div class='line-note'>🎭 短く鋭く。</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">ふふ。旅人の目をしておる。それだけよ。——魔王を倒した後のことは、考えておるかね？</div>
+</div><div class="line other">
+  <span class="char-label other-label">⚔️ アレン</span>
+  <div class="line-text other-text">倒した後……？平和になる、それだけじゃないんですか？</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">そうだといいのう。……人も、魔族も、すべては神の御心のままよ。</div>
+</div><div class="line other">
+  <span class="char-label other-label">✨ セラフィア</span>
+  <div class="line-text other-text">（小声で）なんか……この方、少し怖いですね。</div>
+</div><div class="line other">
+  <span class="char-label other-label">☀️ ルクス</span>
+  <div class="line-text other-text">ははは。老人の繰り言よ。精々励むがいい——勇者よ。</div>
+</div></div>
+</div><div class="scene-block">
+  <div class="scene-title">🏹 焚き火の夜</div>
+  <div class="scene-lines"><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">ねえ、覚えてる？昔あんた、魔法の練習中に池に落ちてさ。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_03</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……忘れろ。</div>
+  <div class='line-note'>🎭 照れ隠し。短く切る。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">私が笑ったら、すっごい怖い顔したよね。でも一緒に拾い集めてくれたじゃん、落とした本。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_04</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……本が濡れるのが嫌だっただけだ。</div>
+  <div class='line-note'>🎭 強がり。照れているが絶対に認めない。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">ふふ。昔からそういう人だよね、あんたって。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_05</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……うるさい。</div>
+  <div class='line-note'>🎭 図星を突かれた照れ隠し。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">ねえ——終わったら、また二人でどこか行こうよ。昔みたいに。</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_06</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……（しばらく沈黙）——どこに行きたい。</div>
+  <div class='line-note'>🎭 長い間の後、ぽつりと本心が出る。</div>
+</div><div class="line other">
+  <span class="char-label other-label">🏹 エリナ</span>
+  <div class="line-text other-text">え！？い、行ってくれるの！？</div>
+</div><div class="line mine">
+  <div class="line-meta">
+    <span class="file-tag">raios_07</span>
+    <span class="char-label mine-label">🔮 ライオス</span>
+  </div>
+  <div class="line-text mine-text">……聞いただけだ。うるさい。</div>
+  <div class='line-note'>🎭 エリナの反応に焦って誤魔化す。</div>
+</div></div>
+</div>
+
+</body>
+</html>
